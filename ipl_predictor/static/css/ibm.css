@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-image:url('../images/6.jpeg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(245, 241, 241); */
+     /* width: 100%; */
+    /* height: 100vh;  */
+    /* width: 100%;
+    height: 100%; */
+    /* background: fixed; */
+}
+
+/* img{
+    margin-left: 50px;
+} */
+
+/* .bar .ulis{
+    background-color: crimson;
+} */
+
+header ul .lis {
+    float: left;
+    padding-top: 15px;
+    margin-right: 40px;
+    /* color: black; */
+    font-family: 'Krona One', sans-serif;
+    font-size: 25px;
+    list-style: none;
+    /* background-color: cornflowerblue; */
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: lightblue;
+    border-bottom: 2px solid lightblue;
+}
+
+h2{
+    font-family: 'Krona One', sans-serif;
+}
+
+.form{
+    background: linear-gradient(rgba(0,0,0,0.8),rgb(0,0,0,0.8));
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    width: 40%;
+    /* margin: 0 auto; */
+    margin-left: 30%;
+    margin-top: 2%;
+    padding-top: 15px;
+    margin-bottom: 2%;
+    /* margin-top: 20px; */
+    text-align: center;
+    /* background-color: lightblue; */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+label{
+    color: white;
+    font-size: 20px;
+}
+
+select{
+    /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5); */
+    font-size: 20px;
+    padding-left: 2px;
+    padding-right: 20px;
+    background-color: rgb(54, 158, 192);
+    color: white;
+}
+
+.form .s1 , .s2{
+    width: 60%;
+}
+
+input{
+    width: 60%;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(54, 158, 192);
+    font-size: 20px;
+}
+
+.form-input{
+    border-bottom: 3px solid rgb(54, 158, 192);
+}
+
+input::placeholder{
+    text-align: center;
+}
+
+.form .butn{
+    background-color: rgb(54, 158, 192);
+    color: white;
+    width: 20%;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.butn:hover{
+    background-color: white;
+    color: rgb(54, 158, 192);
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+
+
+
+    header ul .lis {
+        /* float: left; */
+        padding-top: 4px;
+        margin-right: 20px;
+        /* color: black; */
+        /* font-family: 'Krona One', sans-serif; */
+        font-size: 15px;
+        /* list-style: none; */
+        /* background-color: cornflowerblue; */
+    }
+
+    label{
+        color: white;
+        font-size: 10px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    select{
+        /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5); */
+        font-size: 10px;
+        padding-left: 2px;
+        padding-right: 20px;
+        background-color: rgb(54, 158, 192);
+        color: white;
+    }
+    input::placeholder{
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .form .butn{
+        background-color: rgb(54, 158, 192);
+        color: white;
+        width: 20%;
+        font-size: 7px;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1050px){
+    html{
+        font-size: 50%;
+    }
+
+
+
+    header ul .lis {
+        /* float: left; */
+        padding-top: 4px;
+        margin-right: 20px;
+        /* color: black; */
+        /* font-family: 'Krona One', sans-serif; */
+        font-size: 15px;
+        /* list-style: none; */
+        /* background-color: cornflowerblue; */
+    }
+
+    label{
+        color: white;
+        font-size: 10px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    select{
+        /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5); */
+        font-size: 10px;
+        padding-left: 2px;
+        padding-right: 20px;
+        background-color: rgb(54, 158, 192);
+        color: white;
+    }
+    input::placeholder{
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .form .butn{
+        background-color: rgb(54, 158, 192);
+        color: white;
+        width: 20%;
+        font-size: 7px;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}
