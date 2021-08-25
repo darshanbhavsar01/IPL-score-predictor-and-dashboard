@@ -1,0 +1,187 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Strikers | Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <style>
+        .navbar-brand
+            {
+              font-size: 25px;
+            }
+        .nav-link
+            {
+              font-size: 25px;
+            }
+        @media (max-width: 500px){
+            html{
+                font-size: 50%;
+            }
+        header ul .lis {
+            padding-top: 4px;
+            margin-right: 20px;
+            font-size: 15px;
+        }
+        label{
+            color: white;
+            font-size: 10px;
+        }
+        a{
+            font-size: 10px;
+        }
+        select{
+            font-size: 10px;
+            padding-left: 2px;
+            padding-right: 20px;
+            background-color: rgb(54, 158, 192);
+            color: white;
+        }
+        input::placeholder{
+            text-align: center;
+            font-size: 4px;
+        }
+        .form .butn{
+            background-color: rgb(54, 158, 192);
+            color: white;
+            width: 20%;
+            font-size: 7px;
+            padding: 2px;
+            border-radius: 5px;
+        }
+}
+
+    @media (max-width: 1050px){
+        html{
+            font-size: 50%;
+        }
+    header ul .lis {
+        padding-top: 4px;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    label{
+        color: white;
+        font-size: 10px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    select{
+        font-size: 10px;
+        padding-left: 2px;
+        padding-right: 20px;
+        background-color: rgb(54, 158, 192);
+        color: white;
+    }
+    input::placeholder{
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .form .butn{
+        background-color: rgb(54, 158, 192);
+        color: white;
+        width: 20%;
+        font-size: 7px;
+        padding: 2px;
+        border-radius: 5px;
+    }
+}
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="{% url 'predictor' %}">Strikers</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only"> (current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <br>
+    </header>
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            <label> Batting Team: </label><br>
+            <select name="batting-team" class="s1" required>
+                <option value="none">--- Select a Batting team ---</option>
+                <option value="4">Mumbai Indians</option>
+                <option value="3">Kolkata Knight Riders</option>
+                <option value="0">Chennai Super Kings</option>
+                <option value="5">Rajasthan Royals</option>
+                <option value="2">Punjab Kings</option>
+                <option value="6">Royal Challengers Bangalore</option>
+                <option value="1">Delhi Capitals</option>
+                <option value="7">Sunrisers Hyderabad</option>
+            </select><br><br>
+            <label> Bowling Team: </label><br>
+            <select  name="bowling-team" class="s2" required>
+                <option value="none">--- Select a Bowling team ---</option>
+                <option value="4">Mumbai Indians</option>
+                <option value="3">Kolkata Knight Riders</option>
+                <option value="0">Chennai Super Kings</option>
+                <option value="5">Rajasthan Royals</option>
+                <option value="2">Punjab kings</option>
+                <option value="6">Royal Challengers Bangalore</option>
+                <option value="1">Delhi Capitals</option>
+                <option value="7">Sunrisers Hyderabad</option>
+            </select><br><br>
+            <label> Venue: </label><br>
+            <select name="venue" class="s2" required>
+                <option value="none">-- Select the Stadium --</option>
+                <option value="1">Eden Gardens</option>
+                <option value="2">Feroz Shah Kotla, Delhi</option>
+                <option value="5">M Chinnaswamy Stadium, Bangalore</option>
+                <option value="6">MA Chidambaram Stadium, Chepauk</option>
+                <option value="11">Sawai Mansingh Stadium, Jaipur</option>
+                <option value="8">Punjab Cricket Association Stadium, Mohali</option>
+                <option value="9">Rajiv Gandhi International Stadium, Uppal</option>
+                <option value="12">Wankhede Stadium</option>
+                <option value="10">Sardar Patel Stadium, Motera</option>
+                <option value="3">Himachal Pradesh Cricket Association Stadium, Dharamshala</option>
+                <option value="0">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam</option>
+                <option value="7">Maharashtra Cricket Association Stadium, Pune</option>
+                <option value="4">JSCA International Stadium Complex, Ranchi</option>
+
+            </select><br><br>
+            <label> Overs: </label><br>
+            <input class="form-input" type="number" style="text-align:center;" step="any" name="overs" value="{{ finished_overs }}" placeholder="Overs (>= 5.0) Eg. 7.2" required><br><br>
+            <label> Runs Scored: </label><br>
+            <input  class="form-input" type="number" style="text-align:center;" name="runs" value="{{ score }}" placeholder="Eg. 64" required><br><br>
+            <label> Wickets Fallen: </label><br>
+            <input class="form-input" type="number" style="text-align:center;" name="wickets" value="{{ player_down }}" placeholder="Eg. 4" required><br><br>
+            <label> Runs Scored in previous 5 Overs: </label><br>
+            <input class="form-input" type="number" style="text-align:center;" name="runs_in_prev_5" value="{{ score_in_prev_5 }}" placeholder="Eg. 42" required><br><br>
+            <label> Wickets taken in previous 5 Overs: </label><br>
+            <input class="form-input" type="number" style="text-align:center;" name="wickets_in_prev_5" value="{{ w_in_prev_5 }}" placeholder="Eg. 3" required><br><br>
+
+            <input type="submit" value="Predict" class="butn"><br><br>
+            {% for msg in messages %}
+                <p style="color:white;text-align:center;">{{msg}}</p>
+            {% endfor %}
+            <h3 style="color:white;text-align:center;">Approximate score at the end of inning: {{ output }}</h3>
+            <br>
+        </form>
+    </div>
+<br>
+</body>
+</html>
