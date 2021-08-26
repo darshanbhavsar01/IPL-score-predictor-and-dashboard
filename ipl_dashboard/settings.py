@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-a19uk3-3!4yp2la*rmx9j(o*4tb@y9ly^ib*h5=)zk+br&rr4b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://ipl-cricfreak.herokuapp.com/']
 
 
 # Application definition
