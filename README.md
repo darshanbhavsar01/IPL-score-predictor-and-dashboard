@@ -12,7 +12,7 @@ A website to predict scores of live IPL matches and also visualize statistical a
 
   
 ## Website URL
-https://ipl-cricfreak.herokuapp.com/
+The app was hosted on Heroku's free tier, which has been discontinued, so it is no longer online. Follow the setup steps below to run it locally.
 
 
 
@@ -32,7 +32,7 @@ To deploy this project we have used Heroku platform and connected that to our pr
 
 ## How to setup this project on your local machine
 
- 1. Clone This Project `git clone https://github.com/darsh295/IPL-score-predictor-and-dashboard.git`
+ 1. Clone This Project `git clone https://github.com/darshanbhavsar01/IPL-score-predictor-and-dashboard.git`
  2. Go to Project Directory `cd IPL-score-predictor-and-dashboard`
  3. Create a Virtual Environment `python3 -m venv env`
  4. Activate Virtual Environment `source env/bin/activate`
